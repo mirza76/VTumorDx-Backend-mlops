@@ -1,0 +1,21 @@
+name: format and lint checking
+
+on: 
+  push:
+    branches: [ main ]
+
+jobs:
+
+  formatting-and-linting:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Install formatting and linting libraries
+      run: pip install black pylint
+    - name: Lint-checking the code
+      run: pylint --disable=R,C polyglot
+      continue-on-error: true
+    - name: Format-checking the code
+      run: black --check polyglot
+      continue-on-error: true
