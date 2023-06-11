@@ -2,7 +2,7 @@ name: testing, format and lint checking
 
 on: 
   push:
-    branches: [ i190652-github-actions ]
+    branches: [ main ]
 
 jobs:
 
