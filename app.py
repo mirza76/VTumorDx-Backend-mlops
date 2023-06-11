@@ -10,6 +10,7 @@ CORS(app)
 
 model = VTumorDxModel()
 
+
 CORS(app, origins=['http://localhost:4200'])
 
 @app.route("/api/prediction", methods=["GET", "POST"])
