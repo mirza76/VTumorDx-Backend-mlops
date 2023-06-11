@@ -2,7 +2,7 @@ name: codeql on push
 
 on: 
   push:
-    branches: [ i190652-github-actions ]
+    branches: [ main ]
 
 jobs:
 
